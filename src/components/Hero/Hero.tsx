@@ -84,7 +84,7 @@ export default component$(() => {
                 </Button>
 
                 <a
-                  href="https://cal.com/sebastian-cardoso-castillo/estrategia?notes=Origen:Hero" 
+                  href="https://cal.com/sebastian-cardoso-castillo/estrategia?notes=Origen:Hero"
                   target="_blank"
                   rel="noopener noreferrer"
                   // Mantenemos px-10 py-4 y text-lg para que sea gemelo del Button size="lg"
@@ -156,7 +156,7 @@ export default component$(() => {
               {/* NETLIFY */}
               <div class="flex items-center gap-2 group">
                 <LuServer class="w-6 h-6 text-gray-400 group-hover:text-[#00C7B7]" />
-                <span class="text-xl font-bold text-gray-700 group-hover:text-[#00C7B7] transition-colors">Netlify Edge</span>
+                <span class="text-xl font-bold text-gray-700 group-hover:text-[#00C7B7] transition-colors">Vercel Edge</span>
               </div>
 
               {/* STRAPI */}
