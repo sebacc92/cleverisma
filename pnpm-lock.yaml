@@ -7,10 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      button:
-        specifier: ^1.1.1
-        version: 1.1.1
     devDependencies:
       '@builder.io/qwik':
         specifier: 1.17.2
@@ -2910,9 +2906,6 @@ packages:
 
   builtins@5.1.0:
     resolution: {integrity: sha512-SW9lzGTLvWTP1AY8xeAMZimqDrIaSdLQUcVr9DMef51niJ022Ri87SwRRKYm4A6iHfkPaiVUu/Duw2Wc4J7kKg==}
-
-  button@1.1.1:
-    resolution: {integrity: sha512-/eICyCdXkem6L3i02jNfo7CgY0lDtELov2IhiTAUkkl3kTnnr/Jee0Fjnj4TuLwl8wkdtplZaWWXMCeowmkmpA==}
 
   byline@5.0.0:
     resolution: {integrity: sha512-s6webAy+R4SR8XVuJWt2V2rGvhnrhxN+9S15GNuTK3wKPOXFF6RNc+8ug2XhH+2s4f+uudG4kUVYmYOQWL2g0Q==}
@@ -10745,8 +10738,6 @@ snapshots:
   builtins@5.1.0:
     dependencies:
       semver: 7.5.4
-
-  button@1.1.1: {}
 
   byline@5.0.0: {}
 
