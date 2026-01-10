@@ -32,7 +32,7 @@ export default component$(() => {
                   <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"> venden</span>
                 </h2>
                 <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
-                  Somos especialistas en desarrollo web de alto rendimiento. Nos enfocamos en velocidad real en mobile, accesibilidad y experiencia de usuario que convierte. Estamos ampliando nuestras capacidades en IA y marketing con formación y proyectos piloto.
+                  Somos especialistas en desarrollo web de alto rendimiento. Nos enfocamos en velocidad real en mobile, accesibilidad y experiencia de usuario que convierte. Estamos ampliando nuestras capacidades en automatización con IA y marketing digital.
                 </p>
               </div>
 
