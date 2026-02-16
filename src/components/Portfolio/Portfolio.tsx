@@ -2,10 +2,27 @@ import { component$ } from "@builder.io/qwik";
 import ImgPortfolioSebastian from '~/media/images/portfolio-sebastian.png?quality=75&jsx';
 import ImgPortfolioItalianos from '~/media/images/portfolio-italianos.png?quality=75&jsx';
 import ImgPortfolioFabian from '~/media/images/portfolio-fabian.png?quality=75&jsx';
+import ImgPortfolioEnlaceSalud from '~/media/images/portfolio-enlace-salud.png?quality=75&jsx';
+import ImgPortfolioKoop from '~/media/images/portfolio-koop.png?quality=75&jsx';
 import { CircleScore } from "~/components/ui/CircleScore/CircleScore";
 
 export default component$(() => {
   const projects = [
+    {
+      title: "Koop Viajes",
+      description: "Agencia de viajes dedicada a crear experiencias inolvidables y destinos exclusivos. (Próximamente)",
+      image: ImgPortfolioKoop,
+      link: "https://koop.com.ar/",
+      tags: ["Turismo", "Plataforma"],
+      wip: true
+    },
+    {
+      title: "Enlace en Salud",
+      description: "Soluciones integrales en gestión sanitaria, salud ocupacional y bienestar laboral.",
+      image: ImgPortfolioEnlaceSalud,
+      link: "https://enlacesalud.com.ar/",
+      tags: ["Salud", "Gestión", "Empresas"]
+    },
     {
       title: "Sebastian Cardoso",
       description: "Portfolio personal y servicios de desarrollo web de alto rendimiento.",
@@ -66,10 +83,17 @@ export default component$(() => {
                 />
 
                 {/* PageSpeed Badge */}
-                <div class="absolute top-3 right-3 z-20 bg-green-700 px-3 py-1 rounded-full shadow-lg border border-green-500 flex items-center gap-2">
-                  <div class="w-2 h-2 rounded-full bg-white animate-pulse"></div>
-                  <span class="text-xs font-bold text-white">CORE WEB VITALS: 100/100</span>
-                </div>
+                {'wip' in project && project.wip ? (
+                  <div class="absolute top-3 left-3 z-30 bg-amber-500 px-3 py-1 rounded-full shadow-lg border border-amber-400 flex items-center gap-2">
+                    <div class="w-2 h-2 rounded-full bg-white animate-pulse"></div>
+                    <span class="text-xs font-bold text-white uppercase tracking-wider">En Desarrollo</span>
+                  </div>
+                ) : (
+                  <div class="absolute top-3 right-3 z-20 bg-green-700 px-3 py-1 rounded-full shadow-lg border border-green-500 flex items-center gap-2">
+                    <div class="w-2 h-2 rounded-full bg-white animate-pulse"></div>
+                    <span class="text-xs font-bold text-white">CORE WEB VITALS: 100/100</span>
+                  </div>
+                )}
 
                 <div class="absolute bottom-4 left-4 right-4 z-20 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                   <a
@@ -78,7 +102,7 @@ export default component$(() => {
                     rel="noopener noreferrer"
                     class="inline-flex items-center gap-2 text-white font-medium hover:underline"
                   >
-                    Visitar Sitio
+                    {'wip' in project && project.wip ? 'Ver Preview' : 'Visitar Sitio'}
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                   </a>
                 </div>
@@ -100,18 +124,27 @@ export default component$(() => {
                   {project.description}
                 </p>
 
-                {/* Performance Indicator */}
+                {/* Performance Indicator - Hide for WIP if needed, or keep 100 if we want to show off :) Let's hide score for WIP and show "Building" */}
                 <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
-                  <div class="relative w-14 h-14 flex-shrink-0">
-                    <CircleScore score={100} />
-                    <div class="absolute inset-0 flex items-center justify-center">
-                      <span class="text-sm font-bold text-green-700">100</span>
+                  {'wip' in project && project.wip ? (
+                    <div class="flex items-center gap-2 text-amber-600">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="animate-spin-slow"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg>
+                      <span class="text-sm font-bold">Construyendo experiencia...</span>
                     </div>
-                  </div>
-                  <div class="flex flex-col">
-                    <span class="text-sm font-bold text-gray-900">Rendimiento</span>
-                    <span class="text-xs text-gray-500">Google PageSpeed</span>
-                  </div>
+                  ) : (
+                    <>
+                      <div class="relative w-14 h-14 flex-shrink-0">
+                        <CircleScore score={100} />
+                        <div class="absolute inset-0 flex items-center justify-center">
+                          <span class="text-sm font-bold text-green-700">100</span>
+                        </div>
+                      </div>
+                      <div class="flex flex-col">
+                        <span class="text-sm font-bold text-gray-900">Rendimiento</span>
+                        <span class="text-xs text-gray-500">Google PageSpeed</span>
+                      </div>
+                    </>
+                  )}
                 </div>
               </div>
             </div>

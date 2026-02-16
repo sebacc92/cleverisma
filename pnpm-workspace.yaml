@@ -1,0 +1,9 @@
+onlyBuiltDependencies:
+  - '@netlify/esbuild'
+  - '@parcel/watcher'
+  - esbuild
+  - netlify-cli
+  - nx
+  - protobufjs
+  - sharp
+  - unix-dgram

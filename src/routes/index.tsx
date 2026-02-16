@@ -9,6 +9,7 @@ import Portfolio from "~/components/Portfolio/Portfolio";
 import Contacto from "~/components/Contacto/Contacto";
 
 export const useAuditWebsite = routeAction$(async (data, requestEvent) => {
+  console.log('Audit request data:', data);
   const token = (data as any)['cf-turnstile-response'] as string | undefined;
   if (!token) {
     return { success: false, message: 'Falta la verificación anti-bots. Por favor, intenta nuevamente.' };
@@ -103,6 +104,7 @@ export const useAuditWebsite = routeAction$(async (data, requestEvent) => {
 });
 
 export const useContact = routeAction$(async (data, requestEvent) => {
+  console.log('Contact request data:', data);
   const token = (data as any)['cf-turnstile-response'] as string | undefined;
   if (!token) {
     return { success: false, message: 'Falta la verificación anti-bots. Por favor, intenta nuevamente.' };
