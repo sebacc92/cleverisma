@@ -4,7 +4,7 @@ import styles from "./whatsapp-button.css?inline";
 
 export default component$(() => {
   useStylesScoped$(styles);
-  const phoneNumber = "+541123895482";
+  const phoneNumber = "+542233490214";
   const message = encodeURIComponent(
     "Hola, me gustaría solicitar un sitio web para mi negocio. ¿Podrían brindarme más información sobre los servicios y presupuesto?"
   );
