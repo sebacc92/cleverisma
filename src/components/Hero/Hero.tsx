@@ -103,10 +103,12 @@ export default component$(() => {
                   triggerText="Open Modal"
                   showSig={showAuditModal}
                 >
-                  <AuditForm
-                    onCloseModal$={onCloseModal$}
-                    onShowToast$={onShowToast$}
-                  />
+                  {showAuditModal.value && (
+                    <AuditForm
+                      onCloseModal$={onCloseModal$}
+                      onShowToast$={onShowToast$}
+                    />
+                  )}
                 </Modal>
               </div>
             </div>

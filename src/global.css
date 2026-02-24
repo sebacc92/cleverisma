@@ -41,6 +41,7 @@
     --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.01);
     --transform-press: scale(0.95);
   }
+
   .dark {
     --background: var(--color-slate-950);
     --foreground: var(--color-slate-50);
@@ -129,14 +130,17 @@
     from {
       height: 0;
     }
+
     to {
       height: var(--qwikui-collapsible-content-height);
     }
   }
+
   @keyframes collapsible-up {
     from {
       height: var(--qwikui-collapsible-content-height);
     }
+
     to {
       height: 0;
     }
@@ -146,14 +150,17 @@
 @utility press {
   transform: var(--transform-press);
 }
+
 @utility border-width-* {
   /* prettier-ignore */
   border: --value(--border-width-*);
 }
+
 @utility stroke-width-* {
   /* prettier-ignore */
   stroke: --value(--stroke-width-*);
 }
+
 @utility shadow-* {
   /* prettier-ignore */
   box-shadow: --value(--shadow-*);
@@ -163,6 +170,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -521,4 +529,19 @@ img {
 
 textarea {
   field-sizing: content;
+}
+
+@keyframes score-draw {
+  from {
+    stroke-dashoffset: 226.19;
+    /* Circunferencia total (2 * PI * 36) */
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-score-draw {
+  animation: score-draw 1.5s ease-out forwards;
 }

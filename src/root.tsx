@@ -17,6 +17,13 @@ export default component$(() => {
     <QwikCityProvider>
       <head>
         <meta charset="utf-8" />
+        <link
+          rel="preload"
+          href="/fonts/PlusJakartaSans.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
         {!isDev && (
           <link
             rel="manifest"

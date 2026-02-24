@@ -1,28 +1,57 @@
-import { $, component$, useOnWindow, useSignal } from "@builder.io/qwik";
+import { $, component$, useSignal, useVisibleTask$ } from "@builder.io/qwik";
 import { LuChevronUp } from "@qwikest/icons/lucide";
 
 export const ScrollToTop = component$(() => {
   const show = useSignal(false);
+  // Referencia al elemento centinela para observarlo sin buscarlo en el DOM
+  const sentinelRef = useSignal<Element>();
 
-  useOnWindow(
-    "scroll",
-    $(() => {
-      // Use requestAnimationFrame for smooth UI updates
-      requestAnimationFrame(() => {
-        show.value = window.scrollY > 120;
-      });
-    })
-  );
+  useVisibleTask$(({ cleanup }) => {
+    if (!sentinelRef.value) return;
+
+    const observer = new IntersectionObserver(([entry]) => {
+      // Si el centinela NO se ve, mostramos el botón
+      show.value = !entry.isIntersecting;
+    }, {
+      rootMargin: "0px",
+      threshold: 0
+    });
+
+    observer.observe(sentinelRef.value);
+
+    cleanup(() => observer.disconnect());
+  });
+
+  const scrollToTop = $(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 
   return (
-    <button
-      type="button"
-      aria-label="Scroll to top"
-      onClick$={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      class={`cursor-pointer fixed z-50 bottom-6 right-6 bg-[#7c3aed] text-white rounded-full shadow-lg p-3 transition-opacity duration-300 hover:bg-[#6d3aed] focus:outline-none focus:ring-2 focus:ring-[#7c3aed] ${show.value ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
-      style={{ contain: 'layout paint' }}
-    >
-      <LuChevronUp class="h-6 w-6" />
-    </button>
+    <>
+      <div
+        ref={sentinelRef}
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          height: '120px',
+          width: '100%',
+          pointerEvents: 'none',
+          visibility: 'hidden',
+          zIndex: -1
+        }}
+        aria-hidden="true"
+      />
+
+      <button
+        type="button"
+        aria-label="Volver arriba"
+        onClick$={scrollToTop}
+        class={`fixed bottom-8 right-8 p-3 rounded-full bg-primary text-white shadow-lg transition-all duration-300 z-50 hover:-translate-y-1 hover:shadow-xl ${show.value ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"
+          }`}
+      >
+        <LuChevronUp class="w-6 h-6" />
+      </button>
+    </>
   );
-}); 
+});
