@@ -165,6 +165,12 @@ export default component$(() => {
                 <span class="text-xl font-bold text-gray-700 group-hover:text-[#4945FF] transition-colors">Storyblok</span>
               </div>
 
+              {/* Turso */}
+              <div class="flex items-center gap-2 group">
+                <LuDatabase class="w-6 h-6 text-gray-400 group-hover:text-green-600 transition-colors" />
+                <span class="text-xl font-bold text-gray-700 group-hover:text-[#4945FF] transition-colors">Turso</span>
+              </div>
+
               {/* SHOPIFY */}
               <div class="flex items-center gap-2 group cursor-help" title="E-commerce Headless">
                 <LuShoppingBag class="w-6 h-6 text-gray-400 group-hover:text-green-600 transition-colors" />

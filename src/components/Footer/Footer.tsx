@@ -20,16 +20,16 @@ export default component$(() => {
               Creamos sitios webs veloces que mejoran tus Core Web Vitals. Más velocidad, mas retención, mejor SEO, más clientes. Simple.
             </p>
             <div class="flex space-x-4">
-              <a href="#" aria-label="Seguir a Cleverisma en LinkedIn" class="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center text-gray-600 hover:text-white hover:bg-purple-600 transition-all duration-300">
+              <a href="https://linkedin.com/in/sebastiancardoso92/" aria-label="Seguir a Cleverisma en LinkedIn" class="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center text-gray-600 hover:text-white hover:bg-purple-600 transition-all duration-300">
                 <LuLinkedin class="w-5 h-5" />
               </a>
-              <a href="#" aria-label="Seguir a Cleverisma en YouTube" class="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center text-gray-600 hover:text-white hover:bg-purple-600 transition-all duration-300">
+              <a href="https://youtube.com/@sebacc92" aria-label="Seguir a Cleverisma en YouTube" class="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center text-gray-600 hover:text-white hover:bg-purple-600 transition-all duration-300">
                 <LuYoutube class="w-5 h-5" />
               </a>
-              <a href="#" aria-label="Seguir a Cleverisma en TikTok" class="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center text-gray-600 hover:text-white hover:bg-purple-600 transition-all duration-300">
+              <a href="https://tiktok.com/@sebacc92" aria-label="Seguir a Cleverisma en TikTok" class="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center text-gray-600 hover:text-white hover:bg-purple-600 transition-all duration-300">
                 <BsTiktok class="w-5 h-5" />
               </a>
-              <a href="#" aria-label="Seguir a Cleverisma en Instagram" class="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center text-gray-600 hover:text-white hover:bg-purple-600 transition-all duration-300">
+              <a href="https://instagram.com/sebacc92" aria-label="Seguir a Cleverisma en Instagram" class="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center text-gray-600 hover:text-white hover:bg-purple-600 transition-all duration-300">
                 <LuInstagram class="w-5 h-5" />
               </a>
             </div>

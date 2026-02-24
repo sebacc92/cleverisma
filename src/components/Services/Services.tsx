@@ -3,7 +3,7 @@ import { Link } from '@builder.io/qwik-city';
 import { LuCheck, LuArrowRight, LuSparkles, LuInfo, LuCalendarClock } from "@qwikest/icons/lucide";
 
 // --- CONFIGURACIÓN DE NEGOCIO ---
-const EXCHANGE_RATE = 1500; // 1 USD = 1500 ARS
+const EXCHANGE_RATE = 1400; // 1 USD = 1500 ARS
 
 // Si es TRUE, mostramos precios de oferta
 const IS_LAUNCH_MODE = true;
