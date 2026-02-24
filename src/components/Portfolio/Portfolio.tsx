@@ -84,9 +84,9 @@ export default component$(() => {
 
                 {/* PageSpeed Badge */}
                 {'wip' in project && project.wip ? (
-                  <div class="absolute top-3 left-3 z-30 bg-amber-500 px-3 py-1 rounded-full shadow-lg border border-amber-400 flex items-center gap-2">
-                    <div class="w-2 h-2 rounded-full bg-white animate-pulse"></div>
-                    <span class="text-xs font-bold text-white uppercase tracking-wider">En Desarrollo</span>
+                  <div class="absolute top-3 left-3 z-30 bg-amber-400 px-3 py-1 rounded-full shadow-lg border border-amber-300 flex items-center gap-2">
+                    <div class="w-2 h-2 rounded-full bg-amber-950 animate-pulse"></div>
+                    <span class="text-xs font-bold text-amber-950 uppercase tracking-wider">En Desarrollo</span>
                   </div>
                 ) : (
                   <div class="absolute top-3 right-3 z-20 bg-green-700 px-3 py-1 rounded-full shadow-lg border border-green-500 flex items-center gap-2">
@@ -127,7 +127,7 @@ export default component$(() => {
                 {/* Performance Indicator - Hide for WIP if needed, or keep 100 if we want to show off :) Let's hide score for WIP and show "Building" */}
                 <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
                   {'wip' in project && project.wip ? (
-                    <div class="flex items-center gap-2 text-amber-600">
+                    <div class="flex items-center gap-2 text-amber-700">
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="animate-spin-slow"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg>
                       <span class="text-sm font-bold">Construyendo experiencia...</span>
                     </div>
