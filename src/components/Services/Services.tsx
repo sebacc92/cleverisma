@@ -36,14 +36,14 @@ const PLANS: Plan[] = [
     title: 'Web Profesional',
     subtitle: 'Diseñada para captar clientes y generar confianza',
 
-    // Anclaje: $999 USD
-    baseSetupUsd: 250,
-    baseMonthlyUsd: 45,
-    baseOneTimeUsd: 1500,
+    // Anclaje: $749 USD
+    baseSetupUsd: 188,
+    baseMonthlyUsd: 34,
+    baseOneTimeUsd: 1125,
 
-    offerSetupUsd: 99,
-    offerMonthlyUsd: 45,
-    offerOneTimeUsd: 999,
+    offerSetupUsd: 74,
+    offerMonthlyUsd: 34,
+    offerOneTimeUsd: 749,
 
     features: [
       'Diseño Estratégico (Landing o Multi-página)',
@@ -54,7 +54,7 @@ const PLANS: Plan[] = [
       'Correos Corporativos (tu@marca.com)',
       'Propiedad total del código al finalizar'
     ],
-    renewalText: 'Renovación Hosting (Año 3): $120 USD/anual',
+    renewalText: 'Renovación Hosting (Año 3): $90 USD/anual',
     ctaText: 'Consultar Disponibilidad',
     ctaLink: 'https://cal.com/sebastian-cardoso-castillo/estrategia?notes=Interes:WebProfesional',
     highlight: false
@@ -64,13 +64,13 @@ const PLANS: Plan[] = [
     title: 'E-commerce Performance',
     subtitle: 'Infraestructura de venta rápida y sin fricción',
 
-    baseSetupUsd: 600,
-    baseMonthlyUsd: 85,
-    baseOneTimeUsd: 2500,
+    baseSetupUsd: 450,
+    baseMonthlyUsd: 64,
+    baseOneTimeUsd: 1875,
 
-    offerSetupUsd: 250,
-    offerMonthlyUsd: 85,
-    offerOneTimeUsd: 1800,
+    offerSetupUsd: 188,
+    offerMonthlyUsd: 64,
+    offerOneTimeUsd: 1350,
 
     features: [
       '⚡ Todo lo del Plan Profesional',
@@ -81,7 +81,7 @@ const PLANS: Plan[] = [
       'Optimización de Imágenes con IA',
       'Carrito de Compras Optimizado'
     ],
-    renewalText: 'Renovación Hosting (Año 3): $180 USD/anual',
+    renewalText: 'Renovación Hosting (Año 3): $135 USD/anual',
     ctaText: 'Planificar mi Tienda',
     ctaLink: 'https://cal.com/sebastian-cardoso-castillo/estrategia?notes=Interes:Ecommerce',
     highlight: false
