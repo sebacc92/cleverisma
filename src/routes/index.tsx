@@ -200,7 +200,7 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: "Cleverisma - Diseño Web, IA y Marketing Digital",
+  title: "Cleverisma - Desarrollo Web de alto rendimiento",
   meta: [
     { name: "description", key: "description", content: "Especialistas en diseño web moderno, automatizaciones con IA y marketing digital estratégico para startups y empresas tecnológicas." },
     { name: "keywords", content: "diseño web, automatización IA, marketing digital, startups, agencia digital, desarrollo web, inteligencia artificial, transformación digital, growth hacking, UX/UI" },

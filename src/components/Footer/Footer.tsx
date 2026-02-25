@@ -39,7 +39,7 @@ export default component$(() => {
           <div>
             <p class="font-semibold text-gray-900 mb-4">Servicios</p>
             <ul class="space-y-2">
-              <li><Link href="/services/web-design" class="text-gray-600 hover:text-purple-600 transition-colors">Diseño Web</Link></li>
+              <li><Link href="#" class="text-gray-600 hover:text-purple-600 transition-colors">Diseño Web</Link></li>
               <li><Link href="#" class="text-gray-600 hover:text-purple-600 transition-colors">IA & Automatización</Link></li>
               <li><Link href="#" class="text-gray-600 hover:text-purple-600 transition-colors">Marketing Digital</Link></li>
               <li><Link href="#services" class="text-gray-600 hover:text-purple-600 transition-colors">Consultoría</Link></li>
