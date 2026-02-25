@@ -41,7 +41,7 @@ export default component$(() => {
       title: "Coach Fitness",
       description: "Sitio web para programas de entrenamiento personalizado y transformación integral.",
       image: ImgPortfolioFabian,
-      link: "https://coach-fabian-avendano.netlify.app/es/",
+      link: "https://fa.cleverisma.com",
       tags: ["Fitness", "Coaching"]
     }
   ];
