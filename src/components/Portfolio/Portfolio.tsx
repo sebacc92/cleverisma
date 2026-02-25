@@ -4,6 +4,7 @@ import ImgPortfolioItalianos from '~/media/images/portfolio-italianos.png?qualit
 import ImgPortfolioFabian from '~/media/images/portfolio-fabian.png?quality=75&jsx';
 import ImgPortfolioEnlaceSalud from '~/media/images/portfolio-enlace-salud.png?quality=75&jsx';
 import ImgPortfolioKoop from '~/media/images/portfolio-koop.png?quality=75&jsx';
+import ImgPortfolioKeepMoving from '~/media/images/portfolio-keep-moving.png?quality=75&jsx';
 import { CircleScore } from "~/components/ui/CircleScore/CircleScore";
 
 export default component$(() => {
@@ -17,18 +18,18 @@ export default component$(() => {
       wip: true
     },
     {
+      title: "Keep Moving",
+      description: "Centro de entrenamiento de fuerza, funcional y comunidad en Miramar.",
+      image: ImgPortfolioKeepMoving,
+      link: "https://keepmoving.cleverisma.com/",
+      tags: ["Fitness", "Comunidad"]
+    },
+    {
       title: "Enlace en Salud",
       description: "Soluciones integrales en gestión sanitaria, salud ocupacional y bienestar laboral.",
       image: ImgPortfolioEnlaceSalud,
       link: "https://enlacesalud.com.ar/",
       tags: ["Salud", "Gestión", "Empresas"]
-    },
-    {
-      title: "Sebastian Cardoso",
-      description: "Portfolio personal y servicios de desarrollo web de alto rendimiento.",
-      image: ImgPortfolioSebastian,
-      link: "https://sebastiancardoso.com/es/",
-      tags: ["Desarrollo Web", "Personal Branding"]
     },
     {
       title: "Italianos en Miramar",
@@ -43,6 +44,13 @@ export default component$(() => {
       image: ImgPortfolioFabian,
       link: "https://fa.cleverisma.com",
       tags: ["Fitness", "Coaching"]
+    },
+    {
+      title: "Sebastian Cardoso",
+      description: "Portfolio personal y servicios de desarrollo web de alto rendimiento.",
+      image: ImgPortfolioSebastian,
+      link: "https://sebastiancardoso.com/es/",
+      tags: ["Desarrollo Web", "Personal Branding"]
     }
   ];
 
